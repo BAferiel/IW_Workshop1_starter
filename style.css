@@ -153,6 +153,10 @@ ________________________
     border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    align-items: center;/*horizantale*/
+    justify-content: center;/*vertical*/
+    flex-direction: column;
 }
 
 .item {
@@ -162,6 +166,12 @@ ________________________
 
 .item1{
     background-color: rgb(255, 190, 225);
+   /*  absolute par rapport body relative par rapport balise eli houwa feha */
+   /*en l'utilise avecnavbar
+    position: fixed;*/
+    /* position: sticky;scroler dans le container */
+    top: 50px;
+    left: 50px;
 }
 
 .item2{
@@ -190,6 +200,32 @@ ________________________
     margin: 10px;
     font-size: 25px;
 }
+/*par rapport container*/
+.box__pixels{
+    width: 200px;
+}
+/*meme taille pour toute page */
+.box__percent{
+    width: 50%;
+}
+.box__vw{
+    width: 50vw;
+}
+.box__vh{
+    height: 20vh;
+}
+.font__lem{
+    font-size: 1em;
+}
+.font__lrem{
+    font-size: 1rem;
+}
+.font__100percent{
+    font-size: 100%;
+}
+.font__container{
+    height: auto;
+}
 
 
 /*
@@ -214,20 +250,53 @@ ________________________
     margin-bottom: 50px;
     background-color: var(--primary-100);
 }
-/* Extra small devices (phones, 600px and down) */
+body{
+    background-color: rosybrown;
+}
+@media (min-width:600px )and (max-width:900px){
+    body{ background-color:rgb(111, 202, 172);}
+   
+}
 
+/* Extra small devices (phones, 600px and down) */
+@media (max-width:600px){
+ img{
+      max-width: 30%;
+    }
+}
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
-
+@media (min-width:600px)and (max-width:900px){
+    img{
+         max-width: 60%;
+       }
+   }
 
 /* Medium devices (landscape tablets, 768px and up) */
 
+@media (min-width:800px)and (max-width:950px){
+    img{
+         max-width: 60%;
+       }
+   }
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 
+@media (min-width:900px)and (max-width:1900px){
+    img{
+         max-width: 120%;
+       }
+   }
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
+
+
+@media (min-width:1600px){
+    img{
+         max-width: 100%;
+       }
+   }
